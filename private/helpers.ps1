@@ -75,7 +75,7 @@ function Get-WiegandData {
         $outObj = [PSCustomObject]@{
             EP   = $EPc % 2
             DATA = $BINDATA
-            OP   = $EPc % 2
+            OP   = $OPc % 2
         }
 
         $outObj | Add-Member -MemberType ScriptMethod -Name ToString -Value { '{0}{1}{2}' -f $this.EP, $this.DATA, $this.OP } -Force
